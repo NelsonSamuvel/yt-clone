@@ -1,0 +1,144 @@
+
+
+.grid-videos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+
+}
+
+
+@media (min-width:300px) and (max-width:500px){
+  .grid-videos{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media (min-width:501px) and (max-width : 800px){
+  .grid-videos{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (min-width:801px) and (max-width:999px){
+  .grid-videos{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media (min-width:1000px){
+  .grid-videos{
+    grid-template-columns: repeat(4,1fr);
+    padding-left: 14px;
+  }
+
+}
+
+.thumbnail {
+  width: 100%;
+  margin-right: 8px;
+}
+
+.thumbnail-div{
+  position: relative;
+  cursor: pointer;
+}
+
+.timer{
+  position: absolute;
+  background-color: black;
+  color: white;
+  right: 5px;
+  bottom: 12px;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+
+.channel-img{
+  margin-top: 12px;
+  position: relative;
+  height: 50px;
+}
+
+.round-img{
+  border-radius: 50px;
+  width: 45px;
+  cursor: pointer;
+  
+
+}
+
+.profile-modal{
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  display: flex;
+  align-items: center;
+  padding-block: 10px;
+  padding-left: 24px;
+  opacity: 0;
+  z-index: 300;
+  background-color: white;
+  pointer-events: none;
+}
+
+.modal-img img{
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.modal-info{
+  margin-left: 12px;
+}
+
+
+.modal-info .creator{
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+
+.channel-img:hover .profile-modal{
+  opacity: 1;
+}
+
+
+
+
+
+.video-info{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.video-title{
+  font-weight: bold;
+  line-height: 22px;
+  margin-bottom: 16px;
+  margin-top: 12px;
+}
+
+
+.video-author ,.video-stats{
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: rgb(112, 112, 112);
+}
+
+
+
+
+/* .thumbnail{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 120px;
+} */
